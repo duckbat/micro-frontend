@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'juutube',
+      name: 'Video streamer app',
       remotes: {
         mediastore: 'http://localhost:3001/assets/remoteEntry.js',
         front_and_sidebar: 'http://localhost:3002/assets/remoteEntry.js',

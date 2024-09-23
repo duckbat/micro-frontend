@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useForm = <T>(callback: () => void, initState: T) => {
+const useForm = <T, >(callback: () => void, initState: T) => {
   const [inputs, setInputs] = useState<T>(initState);
 
   const handleSubmit = (event: React.SyntheticEvent) => {
