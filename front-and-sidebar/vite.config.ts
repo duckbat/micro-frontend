@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import federation from "@originjs/vite-plugin-federation";
 
 export default defineConfig({
+  base: '/~khaic/S2024/microfrontend/front-and-sidebar/',  // Adjusted base path
   plugins: [
     react(),
     federation({

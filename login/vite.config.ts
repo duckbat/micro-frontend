@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import federation from '@originjs/vite-plugin-federation'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import federation from '@originjs/vite-plugin-federation';
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/~khaic/S2024/microfrontend/login/',  // Adjusted base path
   plugins: [
     react(),
     federation ({
       name: 'login',
       filename: 'remoteEntry.js',
       remotes: {
-        mediastore: 'http://localhost:3001/assets/remoteEntry.js',
-        front_and_sidebar: 'http://localhost:3002/assets/remoteEntry.js',
+        mediastore: 'https://users.metropolia.fi/~khaic/S2024/microfrontend/store/assets/remoteEntry.js',
+        front_and_sidebar: 'https://users.metropolia.fi/~khaic/S2024/microfrontend/front-and-sidebar/assets/remoteEntry.js',
       },
       exposes: {
         './Login': './src/components/LoginForm',
@@ -35,6 +35,6 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+    outDir: 'dist',
   },
-
-})
+});
