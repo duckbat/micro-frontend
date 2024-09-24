@@ -18,10 +18,10 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3002, // Set the desired port here
+    port: 3002, 
   },
   preview: {
-    port: 3002, // Set the desired port here
+    port: 3002,
   },
   resolve: {
     alias: {
