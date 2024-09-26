@@ -6,7 +6,7 @@ import { UserProvider } from './contexts/UserContext';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <UserProvider>
         <MediaProvider>
           <Test />;
